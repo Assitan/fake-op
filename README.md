@@ -12,15 +12,17 @@ Then in the root folder run:
 ```
 yarn
 ```
+to install the dependencies.
 
-Check the package.json for the running scripts.
+Check the ```package.json``` for the running scripts (start, build, test).
+
+-----------------------
 
 This fake OP is a quiz based on old video games
 
 - 3 pages (sign up, quiz, confirmation)
 - fb login
-- share FB, Twitter
+- share FB
 - email sending
 - score
-
-tree :
+- validation Api side

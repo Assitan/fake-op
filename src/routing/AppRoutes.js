@@ -9,10 +9,10 @@ const postUser = (req, res) => {
   // ...Then we save it into the db
   user.save(err => {
     if (err) {
-      res.send(err);
+      return res.status(400).send(err);
+    } else {
+      return res.status(200).json(req.body);
     }
-    res.sendStatus(200)
-    //res.json({ message: 'User created' }); // A simple JSON answer to inform the client
   });
 };
 
@@ -23,10 +23,10 @@ const postQuiz = (req, res) => {
   // ...Then we save it into the db
   quiz.save(err => {
     if (err) {
-      res.send(err);
+      return res.status(400).send(err);
+    } else {
+      return res.status(200).json(req.body);
     }
-    res.sendStatus(200)
-    //res.json({ message: 'Quiz created' }); // A simple JSON answer to inform the client
   });
 };
 
@@ -35,11 +35,12 @@ const getUser = (req, res) => {
     const { id } = req.params;
     // Query the db for a single user, if no errors send it to the client
     SignUp.findById(id, (err, user) => {
-        if (err) {
-            res.send(err);
-        }
-        res.sendStatus(200)
-        res.json(user); // user sent as json
+      if (err) {
+        return res.status(400).send(err);
+      } else {
+        // user sent as json
+        return res.status(200).json(user);
+      }
     });
 }
 
@@ -48,11 +49,12 @@ const getResultQuiz = (req, res) => {
     const { id } = req.params;
     // Query the db for a single result, if no errors send it to the client
     Quiz.findById(id, (err, quiz) => {
-        if (err) {
-            res.send(err);
-        }
-        res.sendStatus(200)
-        res.json(quiz); // Result sent as json
+      if (err) {
+        return res.status(400).send(err);
+      } else {
+        // user sent as json
+        return res.status(200).json(user);
+      }
     });
 }
 

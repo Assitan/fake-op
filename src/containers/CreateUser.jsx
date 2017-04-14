@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { Signup } from '../components';
+import PropTypes from 'prop-types';
+import FacebookProvider, { Login } from 'react-facebook';
 
 export default class CreateUser extends Component {
   constructor (props) {
@@ -11,6 +13,7 @@ export default class CreateUser extends Component {
     this.submit = this.submit.bind(this);
     this.setUser = this.setUser.bind(this);
   }
+
   submit (event) {
     event.preventDefault();
     // We create the newUser object to be posted to the server
@@ -22,13 +25,13 @@ export default class CreateUser extends Component {
       method: 'POST',
       body: JSON.stringify(newUser)
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.message);
-      // We go to the quiz view
-      browserHistory.push('/quiz');
+    .then(response => {
+      if(response.status === 200) {
+        browserHistory.push('/quiz');
+      }
     });
   }
+
   // We make sure to keep the state up-to-date to the latest input values
   setUser () {
     const newUser = {

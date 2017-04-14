@@ -22,5 +22,5 @@ const signUpSchema = new Schema(
     }
 );
 
-// We export the schema to use it anywhere else
-export default mongoose.model('User', signUpSchema);
+// We export the schema to use it anywhere else (SignUp = collection name)
+export default mongoose.model('SignUp', signUpSchema);

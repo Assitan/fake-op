@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 // We tell express where to find static assets
-app.use(express.static(__dirname + '/client/dist'));
+app.use(express.static(__dirname + '/public'));
 
 // Enable CORS so that we can make HTTP request from webpack-dev-server
 app.use((req, res, next) => {
@@ -58,7 +58,7 @@ app.route('/quiz/:id')
 
 // ...For all the other requests just sends back the Homepage
 app.route("*").get((req, res) => {
-  res.sendFile('client/dist/index.html', { root: __dirname });
+  res.sendFile('public/index.html', { root: __dirname });
 });
 
 app.listen(port);

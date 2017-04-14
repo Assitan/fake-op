@@ -20,5 +20,5 @@ const quizSchema = new Schema(
     }
 );
 
-// We export the schema to use it anywhere else
+// We export the schema to use it anywhere else (quiz = collection name)
 export default mongoose.model('Quiz', quizSchema);

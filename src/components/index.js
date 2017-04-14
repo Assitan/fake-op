@@ -1,6 +1,6 @@
 import Signup from './Signup';
 import Quiz from './Quiz';
-import Confirm from './Confirm';
+import {Confirm} from './Confirm';
 
 // We export all the components at once
 export {

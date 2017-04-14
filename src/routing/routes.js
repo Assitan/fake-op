@@ -11,7 +11,8 @@ const routes = (
     <Route path="/quiz" component={CreateQuiz}>
       <IndexRoute component={Quiz} />
     </Route>
-    <Route path="/confirm" component={Confirm} />
+    <Route path="/confirm" component={Confirm}
+    />
   </Router>
 );
 
