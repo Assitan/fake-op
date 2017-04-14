@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { browserHistory } from 'react-router';
 import FacebookProvider, { Login } from 'react-facebook';
-import '../../public/css/Signup.css';
 
 export default class Signup extends PureComponent {
   // FB login
@@ -36,10 +35,12 @@ export default class Signup extends PureComponent {
             <div className="panel panel-default">
                 <div className="panel-heading">
                     <h2 className="panel-title text-center">
-                      Inscription
+                      Testez vos connaissances sur les jeux vidéos
                     </h2>
                 </div>
                 <div className="panel-body">
+                    <p className="text-center">Inscription</p>
+                    <br />
                     <button className="btn center-block text-center btn-fb" role="button">
                       <FacebookProvider appID="1265395410243913">
                         <Login scope="email" onResponse={this.onFacebookResponse.bind(this)}>
@@ -59,7 +60,7 @@ export default class Signup extends PureComponent {
                             <input id="email" type="text" className="form-control" placeholder="test@email.com"
                               onChange={() => this.props.setUser()} />
                       </div>
-                      <button type="submit" className="btn center-block btn-submit">Submit</button>
+                      <button type="submit" className="btn center-block btn-submit">Envoyer</button>
                     </form>
                 </div>
             </div>

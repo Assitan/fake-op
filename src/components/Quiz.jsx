@@ -54,7 +54,7 @@ export default class Quiz extends PureComponent {
                           </label>
                         </div>
                       </div>
-                      <button type="submit" className="btn center-block btn-submit">Submit</button>
+                      <button type="submit" className="btn center-block btn-submit">Envoyer</button>
                     </form>
                 </div>
             </div>

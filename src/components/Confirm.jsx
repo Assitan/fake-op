@@ -16,10 +16,11 @@ export const Confirm = (props) => {
                   <p className="text-center">Vous avez <strong className="score">{score}</strong> points !</p>
 
                   <strong>Réponses</strong>
-                  <p>En quelle année est sorti Super Mario World ? : <strong>1990</strong> <br />
+                  <p className="responses">En quelle année est sorti Super Mario World ? : <strong>1990</strong> <br />
                     En quelle année est sorti Donkey Kong Country ? : <strong>1994</strong> <br />
                     En quelle année est sorti Super Metroid ? : <strong>1994</strong>
                   </p>
+                  <hr />
                   <p className="text-center">Partager sur Facebook</p>
                   <div className="btn-share-fb center-block text-center">
                     <FacebookProvider appID="1265395410243913">

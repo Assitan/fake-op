@@ -1,9 +1,27 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@font-face {
+  font-family: PressStartFont;
+  src: url(../fonts/PressStart2P.ttf);
 }
 
+html, body
+{
+    height: 100%;
+}
+
+body {
+  font-family: PressStartFont;
+  background: #00173E;
+  background: -webkit-linear-gradient(#00173E, #6899F8);
+  background: -o-linear-gradient(#00173E, #6899F8);
+  background: -moz-linear-gradient(#00173E, #6899F8);
+  background: linear-gradient(#00173E, #6899F8);
+}
+
+#root {
+  padding-top: 100px;
+}
+
+.btn-fb, .btn-fb:hover, .btn-fb:active, .btn-fb:focus,
 .btn-share-fb .btn, .btn-share-fb .btn:hover, .btn-share-fb .btn:active {
   background-color: #4267b2;
   color: #fff;
@@ -11,4 +29,8 @@ body {
 
 .score {
   font-size: 26px;
+}
+
+.responses {
+  font-size: 12px;
 }
