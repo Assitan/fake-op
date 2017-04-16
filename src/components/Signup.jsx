@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { browserHistory } from 'react-router';
 import FacebookProvider, { Login } from 'react-facebook';
+import {ErrorDisplay} from './ErrorDisplay';
 
 export default class Signup extends PureComponent {
   // FB login
@@ -54,11 +55,13 @@ export default class Signup extends PureComponent {
                             <label htmlFor="caption">Nom</label>
                             <input id="name" type="text" className="form-control" placeholder=""
                               onChange={() => this.props.setUser()} />
+                        {/* <ErrorDisplay currentUser={() => this.props.setUser()}/> */}
                       </div>
                       <div className="form-group text-left">
                             <label htmlFor="caption">Email</label>
                             <input id="email" type="text" className="form-control" placeholder="test@email.com"
                               onChange={() => this.props.setUser()} />
+                          {/* <ErrorDisplay currentUser={() => this.props.setUser()}/> */}
                       </div>
                       <button type="submit" className="btn center-block btn-submit">Envoyer</button>
                     </form>

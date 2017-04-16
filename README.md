@@ -14,6 +14,8 @@ yarn
 ```
 to install the dependencies.
 
+Connection to the shell Mongo : mongo ds161190.mlab.com:61190/fake-op -u test -p test
+
 Check the ```package.json``` for the running scripts (start, build, test).
 
 -----------------------

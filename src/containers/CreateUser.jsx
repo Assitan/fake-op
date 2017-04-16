@@ -16,6 +16,7 @@ export default class CreateUser extends Component {
 
   submit (event) {
     event.preventDefault();
+
     // We create the newUser object to be posted to the server
     const newUser = Object.assign({}, this.state.newUser);
     fetch('http://localhost:8080/user', {
@@ -32,11 +33,18 @@ export default class CreateUser extends Component {
     });
   }
 
+  // validate(name, email) {
+  //   return {
+  //     name: name.length === 0,
+  //     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  //   }
+  // }
+
   // We make sure to keep the state up-to-date to the latest input values
   setUser () {
     const newUser = {
       name: document.getElementById('name').value,
-      email: document.getElementById('email').value
+      email: document.getElementById('email').value,
     };
     this.setState({ newUser });
   };
