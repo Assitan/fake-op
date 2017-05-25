@@ -1,5 +1,7 @@
 # fake-op
 
+![Projet](capture-projet.png)
+
 If you don't have *yarn* installed, go ahead and install it.
 From npm:
 
